@@ -342,7 +342,7 @@ PRODUCT_PACKAGES += \
     TetheringConfigOverlaynemo \
     WifiOverlaynemo \
     hostapd \
-    android.hardware.wifi@1.0-service.nemo \
+    android.hardware.wifi-service.nemo \
     android.hardware.wifi.supplicant@1.3.vendor:64 \
     libkeystore-engine-wifi-hidl:64 \
     libkeystore-wifi-hidl:64
