@@ -41,6 +41,7 @@ function blob_fixup {
         vendor/lib64/hw/vendor.mediatek.hardware.pq@2.6-impl.so |\
         vendor/lib64/libaalservice.so)
             "$PATCHELF" --replace-needed "libutils.so" "libutils-v32.so" "$2"
+            "$PATCHELF" --replace-needed "libsensorndkbridge.so" "libsensorndkbridge_mtk.so" "$2"
             sed -i 's/_ZN7android6Thread3runEPKcim/_ZN7utils326Thread3runEPKcim/g' "$2"
             ;;
         vendor/lib/hw/audio.primary.mt6785.so)
@@ -73,6 +74,10 @@ function blob_fixup {
         vendor/lib/libaudio_param_parser-vnd.so)
             sed -i "s/\x00audio.tuning.def_path/\x00ro.vendor.tuning_path/" "$2"
             sed -i "s/\x20audio.tuning.def_path/\x20ro.vendor.tuning_path/" "$2"
+            ;;
+        vendor/bin/mnld|\
+        vendor/lib64/libcam.utils.sensorprovider.so)
+            "$PATCHELF" --replace-needed "libsensorndkbridge.so" "libsensorndkbridge_mtk.so" "$2"
             ;;
     esac
 }
