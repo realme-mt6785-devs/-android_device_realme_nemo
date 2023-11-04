@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#define LOG_TAG "vendor.lineage.touch@1.0-service.RM6785"
+#define LOG_TAG "vendor.lineage.touch@1.0-service.nemo"
 
 #include <android-base/logging.h>
 #include <binder/ProcessState.h>

@@ -5,13 +5,13 @@
  */
 
 cc_defaults {
-    name: "android.hardware.health-service.RM6785-defaults",
+    name: "android.hardware.health-service.nemo-defaults",
     defaults: [
         "libhealth_aidl_impl_user",
         "libhealth_aidl_charger_defaults",
     ],
     relative_install_path: "hw",
-    vintf_fragments: ["android.hardware.health-service.RM6785.xml"],
+    vintf_fragments: ["android.hardware.health-service.nemo.xml"],
     srcs: [
         "Health.cpp",
     ],
@@ -21,17 +21,17 @@ cc_defaults {
 }
 
 cc_binary {
-    name: "android.hardware.health-service.RM6785",
-    defaults: ["android.hardware.health-service.RM6785-defaults"],
+    name: "android.hardware.health-service.nemo",
+    defaults: ["android.hardware.health-service.nemo-defaults"],
     vendor: true,
-    init_rc: ["android.hardware.health-service.RM6785.rc"],
+    init_rc: ["android.hardware.health-service.nemo.rc"],
     overrides: ["charger"],
 }
 
 cc_binary {
-    name: "android.hardware.health-service.RM6785-recovery",
-    defaults: ["android.hardware.health-service.RM6785-defaults"],
+    name: "android.hardware.health-service.nemo-recovery",
+    defaults: ["android.hardware.health-service.nemo-defaults"],
     recovery: true,
-    init_rc: ["android.hardware.health-service.RM6785-recovery.rc"],
+    init_rc: ["android.hardware.health-service.nemo-recovery.rc"],
     overrides: ["charger.recovery"],
 }

@@ -8,7 +8,7 @@
 
 set -e
 
-export DEVICE=RM6785
+export DEVICE=nemo
 export VENDOR=realme
 
 # Load extract_utils and do some sanity checks

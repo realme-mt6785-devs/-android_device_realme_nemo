@@ -4,9 +4,9 @@
 // SPDX-License-Identifier: Apache-2.0
 
 cc_binary {
-    name: "vendor.lineage.touch@1.0-service.RM6785",
-    init_rc: ["vendor.lineage.touch@1.0-service.RM6785.rc"],
-    vintf_fragments: ["vendor.lineage.touch@1.0-service.RM6785.xml"],
+    name: "vendor.lineage.touch@1.0-service.nemo",
+    init_rc: ["vendor.lineage.touch@1.0-service.nemo.rc"],
+    vintf_fragments: ["vendor.lineage.touch@1.0-service.nemo.xml"],
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     srcs: [

@@ -8,7 +8,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Call proprietary blob setup
-$(call inherit-product, vendor/realme/RM6785/RM6785-vendor.mk)
+$(call inherit-product, vendor/realme/nemo/nemo-vendor.mk)
 
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
@@ -86,7 +86,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.RM6785
+    android.hardware.biometrics.fingerprint@2.1-service.nemo
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -103,8 +103,8 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.RM6785 \
-    android.hardware.health-service.RM6785-recovery
+    android.hardware.health-service.nemo \
+    android.hardware.health-service.nemo-recovery
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -124,12 +124,12 @@ PRODUCT_PACKAGES += \
     init.mt6785.usb.rc \
     init.project.rc \
     init.sensor_1_0.rc \
-    init.RM6785.rc \
+    init.nemo.rc \
     ueventd.mtk.rc \
-    ueventd.RM6785.rc
+    ueventd.nemo.rc
 
 PRODUCT_PACKAGES += \
-    init_RM6785_vendor
+    init_nemo_vendor
 
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
@@ -145,7 +145,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.RM6785
+    android.hardware.light-service.nemo
 
 # Lineage Health
 PRODUCT_PACKAGES += \
@@ -181,16 +181,11 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
 PRODUCT_PACKAGES += \
-    FrameworksOverlayRMX2151 \
-    FrameworksOverlayRMX2161 \
-    SettingsOverlayRM6785 \
+    SettingsOverlaynemo \
     SettingsProviderOverlay6 \
     SettingsProviderOverlay6i \
     SettingsProviderOverlay6s \
-    SettingsProviderOverlay7 \
     SettingsProviderOverlayNarzo \
-    SettingsProviderOverlayNarzo20Pro \
-    SettingsProviderOverlayNarzo30
 
 # RRO (Runtime Resource Overlay)
 PRODUCT_ENFORCE_RRO_TARGETS += *
@@ -322,7 +317,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.RM6785
+    vendor.lineage.touch@1.0-service.nemo
 
 # Trust HAL
 PRODUCT_PACKAGES += \
@@ -344,10 +339,10 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
-    TetheringConfigOverlayRM6785 \
-    WifiOverlayRM6785 \
+    TetheringConfigOverlaynemo \
+    WifiOverlaynemo \
     hostapd \
-    android.hardware.wifi@1.0-service.RM6785 \
+    android.hardware.wifi@1.0-service.nemo \
     android.hardware.wifi.supplicant@1.3.vendor:64 \
     libkeystore-engine-wifi-hidl:64 \
     libkeystore-wifi-hidl:64
