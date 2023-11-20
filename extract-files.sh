@@ -58,7 +58,7 @@ function blob_fixup {
              grep -q "libshim_utils.so" "$2" || "$PATCHELF" --add-needed "libshim_utils.so" "$2"
             ;;
         vendor/lib64/libmtkcam_stdutils.so)
-            grep -q "$PATCHELF" "libshim_mtkcam.so" || "$PATCHELF" --add-needed "libshim_mtkcam.so" "$2"
+            "$PATCHELF" --replace-needed "libutils.so" "libutils-v30.so" "$2"
             ;;
         vendor/lib64/libwifi-hal-mtk.so)
             "$PATCHELF" --set-soname "libwifi-hal-mtk.so" "$2"
