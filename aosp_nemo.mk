@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021-2023 The ArrowOS Project
+# Copyright (C) 2021-2023 The PixelOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -12,11 +12,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 # Inherit from device makefile
 $(call inherit-product, device/realme/nemo/device.mk)
 
-# Inherit some common ArrowOS stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common PixelOS stuff.
+$(call inherit-product, vendor/aosp/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := arrow_nemo
+PRODUCT_NAME := aosp_nemo
 PRODUCT_DEVICE := nemo
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := nemo

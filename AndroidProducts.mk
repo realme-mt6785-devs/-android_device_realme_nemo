@@ -1,8 +1,8 @@
 #
-# Copyright (C) 2021 The ArrowOS Project
+# Copyright (C) 2021 The PixelOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_nemo.mk
+    $(LOCAL_DIR)/aosp_nemo.mk
